@@ -1,7 +1,7 @@
 PKG nano bash nginx php80
 PKG php80-extensions php80-mbstring php80-gd php80-exif php80-mysqli
 CMD cp /usr/local/etc/php.ini-development /usr/local/etc/php.ini && echo "Creating Default php.ini file"
-#CMD echo 'listen = /var/run/php-fpm.sock' >> /usr/local/etc/php.ini
+#CMD echo 'listen = /var/run/php-fpm.sock' >> /usr/local/etc/php-fpm.d/www.conf
 #CMD echo 'listen.owner = www' >> /usr/local/etc/php-fpm.d/www.conf
 #CMD echo 'listen.mode = 0660' >> /usr/local/etc/php-fpm.d/www.conf
 SYSRC nginx_enable=YES
