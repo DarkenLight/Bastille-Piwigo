@@ -1,0 +1,2 @@
+PKG nano bash nginx php80
+PKG php80-extensions php80-mbstring php80-gd php80-exif php80-mysqli
