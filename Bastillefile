@@ -1,9 +1,11 @@
-PKG nano bash nginx php80 git-lite
-PKG php80-extensions php80-mbstring php80-gd php80-exif php80-mysqli
+PKG nano bash nginx php74 git-lite
+PKG php74-extensions php74-mbstring php74-gd php74-exif php74-mysqli
 CMD cp /usr/local/etc/php.ini-development /usr/local/etc/php.ini && echo "Creating Default php.ini file"
 CMD echo 'listen = /var/run/php-fpm.sock' >> /usr/local/etc/php-fpm.d/www.conf
 CMD echo 'listen.owner = www' >> /usr/local/etc/php-fpm.d/www.conf
 CMD echo 'listen.mode = 0660' >> /usr/local/etc/php-fpm.d/www.conf
+CMD git clone -b 12.x https://github.com/Piwigo/Piwigo /usr/local/www/Piwigo
+CMD chown -R www:www /usr/local/www
 CP overlay/nginx.conf /usr/local/etc/nginx/
 SYSRC nginx_enable=YES
 SYSRC php_fpm_enable=YES
