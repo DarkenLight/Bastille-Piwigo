@@ -6,7 +6,7 @@ CMD cp /usr/local/etc/php.ini-development /usr/local/etc/php.ini && echo "Creati
 CMD echo 'listen = /var/run/php-fpm.sock' >> /usr/local/etc/php-fpm.d/www.conf
 CMD echo 'listen.owner = www' >> /usr/local/etc/php-fpm.d/www.conf
 CMD echo 'listen.mode = 0660' >> /usr/local/etc/php-fpm.d/www.conf
-CMD git clone -b 12.x https://github.com/Piwigo/Piwigo /usr/local/www/Piwigo
+CMD git clone -b 12.x https://github.com/Piwigo/Piwigo /usr/local/www/piwigo
 CMD chown -R www:www /usr/local/www
 CP usr /
 SYSRC php_fpm_enable=YES
