@@ -1,5 +1,5 @@
 ARG php_ver=74
-INCLUDE DarkenLight/Bastille-Nginx
+INCLUDE DarkenLight/Bastille-nginx
 PKG nano bash nginx php"${php_ver}" git-lite
 PKG php"${php_ver}"-extensions php"${php_ver}"-mbstring php"${php_ver}"-gd php"${php_ver}"-exif php"${php_ver}"-mysqli
 CMD cp /usr/local/etc/php.ini-development /usr/local/etc/php.ini && echo "Creating Default php.ini file"
