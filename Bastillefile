@@ -3,6 +3,8 @@ INCLUDE DarkenLight/Bastille-nginx
 PKG nano bash nginx php"${php_ver}" git-lite
 PKG php"${php_ver}"-extensions php"${php_ver}"-mbstring php"${php_ver}"-gd php"${php_ver}"-exif php"${php_ver}"-mysqli
 CMD cp /usr/local/etc/php.ini-development /usr/local/etc/php.ini && echo "Creating Default php.ini file"
+SERVICE php-fpm onestart
+SERVICE php-fpm onestop
 CMD echo 'listen = /var/run/php-fpm.sock' >> /usr/local/etc/php-fpm.d/www.conf
 CMD echo 'listen.owner = www' >> /usr/local/etc/php-fpm.d/www.conf
 CMD echo 'listen.mode = 0660' >> /usr/local/etc/php-fpm.d/www.conf
