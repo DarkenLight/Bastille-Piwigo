@@ -1,7 +1,6 @@
-ARG php_ver=81
 INCLUDE DarkenLight/Bastille-nginx
-PKG nano bash nginx php"${php_ver}" git-lite
-PKG php"${php_ver}"-extensions php"${php_ver}"-mbstring php"${php_ver}"-gd php"${php_ver}"-exif php"${php_ver}"-mysqli php"${php_ver}"-zlib
+PKG nano bash nginx php81 git-lite
+PKG php81-extensions php81-mbstring php81-gd php81-exif php81-mysqli php81-zlib
 CMD cp /usr/local/etc/php.ini-development /usr/local/etc/php.ini && echo "Creating Default php.ini file"
 SERVICE php-fpm onestart
 SERVICE php-fpm onestop
