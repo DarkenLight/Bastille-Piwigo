@@ -31,10 +31,11 @@ Installation overview using XigmanasNAS Bastille Extension Gui
 
 1. SSH to your Xigmanas Server
 
-2. BOOTSTRAP the template
+2. BOOTSTRAP the required templates
+`bastille bootstrap https://github.com/DarkenLight/Bastille-nginx`
 `bastille bootstrap https://github.com/DarkenLight/Bastille-piwigo`
 
-3. Apply the Template to the TARGATE jail.
+4. Apply the Template to the TARGATE jail.
 `bastille template piwigo DarkenLight/Bastille-piwigo`
 
 
